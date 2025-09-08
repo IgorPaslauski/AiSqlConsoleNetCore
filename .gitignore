@@ -1,0 +1,53 @@
+# Compilação / binários
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+
+# Configuração do Visual Studio / Rider
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build do .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Dependências locais
+packages/
+*.nupkg
+*.snupkg
+
+# Teste / cobertura
+TestResult*/
+*.coverage
+*.coveragexml
+*.trx
+
+# CSV e métricas geradas em runtime
+ai_sql_metrics.csv
+*.csv
+
+# Arquivos temporários / SO
+*.tmp
+*.temp
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Configuração de ambiente
+.env
+*.local.json
+appsettings.*.json
