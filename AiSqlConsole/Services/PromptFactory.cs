@@ -9,10 +9,10 @@ Você é um gerador de SQL para PostgreSQL. Responda APENAS JSON com a chave ""s
 Regras:
 - Apenas SELECT (CTE WITH somente se estritamente necessário; prefira um único SELECT com JOINs diretos).
 - Nunca deixe vírgula após a última CTE. A sintaxe correta é: WITH cte1 AS (...), cte2 AS (...) SELECT ...
-- Evite SELECT *; liste colunas e use aliases (ex.: usuario_email).
+- Evite SELECT *; liste colunas e use aliases (ex.: usuario_email, kanban.id as table_kanban_id).
 - Use SOMENTE tabelas/colunas do esquema abaixo; respeite FKs e tabelas de junção (ex.: usuario_cargo, usuario_empresa).
 - Utilize LIMIT {limit}. Sem comentários, markdown ou texto extra.
-
+- Use SOMENTE colunas exatas dessa lista.
 Esquema disponível:
 {schemaText}
 ";
@@ -25,15 +25,11 @@ Esquema disponível:
 
     public static string BuildRepairUserPrompt(string question, string failingSql, string errorMsg, int limit) => $"""
                                                                                                                    A consulta anterior falhou ao executar no PostgreSQL.
-
                                                                                                                    Pergunta original: {question}
-
                                                                                                                    SQL que falhou:
                                                                                                                    {failingSql}
-
                                                                                                                    Erro do PostgreSQL:
                                                                                                                    {errorMsg}
-
                                                                                                                    Gere UMA NOVA SQL corrigida que responda à pergunta, usando apenas o esquema informado no sistema.
                                                                                                                    Regras: apenas SELECT (CTE WITH permitido), evite SELECT *, use aliases para colunas, inclua LIMIT {limit}.
                                                                                                                    Retorne SOMENTE JSON com a chave "sql".

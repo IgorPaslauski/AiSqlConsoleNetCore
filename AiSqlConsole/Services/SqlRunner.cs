@@ -4,7 +4,7 @@ namespace AiSqlConsole.Services;
 
 public static class SqlRunner
 {
-    public static async Task<(bool ok, Exception? error)> ExecuteAndPrintAsync(NpgsqlConnection conn, string sql)
+    public static async Task<(bool ok, Exception? error, int rows)> ExecuteAndPrintWithCountAsync(NpgsqlConnection conn, string sql)
     {
         try
         {
@@ -29,11 +29,11 @@ public static class SqlRunner
             }
 
             Console.WriteLine($"\n{rows} linha(s).");
-            return (true, null);
+            return (true, null, rows);
         }
         catch (Exception ex)
         {
-            return (false, ex);
+            return (false, ex, 0);
         }
     }
 }
