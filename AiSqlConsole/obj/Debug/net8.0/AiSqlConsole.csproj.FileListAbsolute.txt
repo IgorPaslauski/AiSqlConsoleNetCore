@@ -17,3 +17,4 @@ C:\Users\Paslauski\RiderProjects\AiSqlConsole\AiSqlConsole\obj\Debug\net8.0\refi
 C:\Users\Paslauski\RiderProjects\AiSqlConsole\AiSqlConsole\obj\Debug\net8.0\AiSqlConsole.pdb
 C:\Users\Paslauski\RiderProjects\AiSqlConsole\AiSqlConsole\obj\Debug\net8.0\AiSqlConsole.genruntimeconfig.cache
 C:\Users\Paslauski\RiderProjects\AiSqlConsole\AiSqlConsole\obj\Debug\net8.0\ref\AiSqlConsole.dll
+C:\Users\Paslauski\RiderProjects\AiSqlConsole\AiSqlConsole\obj\Debug\net8.0\AiSqlConsole.sourcelink.json

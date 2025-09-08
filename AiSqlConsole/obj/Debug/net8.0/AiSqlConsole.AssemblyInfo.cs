@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AiSqlConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cdbbf50b57a5120b89c2ea0a5801686ffe1a243")]
 [assembly: System.Reflection.AssemblyProductAttribute("AiSqlConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AiSqlConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
